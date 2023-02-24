@@ -28,7 +28,7 @@ const createCard = (category) =>{
     const cardContainer = document.createElement('li');
     const cardTitle = document.createElement('h2');
     const cardDescription = document.createElement('p');
-    let cardButton = document.createElement('button');
+    const cardButton = document.createElement('button');
 
     
     cardButton.innerText = 'Know More'
@@ -39,5 +39,23 @@ const createCard = (category) =>{
     cardContainer.append(cardTitle, cardDescription, cardButton)
 
     return cardContainer
+}
+
+const createOption = (option)=>{
+    const newOption = document.querySelector('option')
+
+    newOption.value = option
+    newOption.innerText = option
+
+}
+
+export const renderSelect = (array) =>{
+    const select = document.querySelector('select')
+
+    array.forEach(option =>{
+        const createdOption = createOption(option)
+
+        select.appendChild(createdOption)
+    })
 }
 

@@ -3,6 +3,7 @@ body{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+  
 }
 .container__header{    
     width: 100%;
@@ -12,6 +13,7 @@ body{
     padding: var(--padding-default);
     box-shadow: var(--shadow);
     position: fixed;
+    z-index: 1;
 }
 
 .menu{
@@ -66,19 +68,34 @@ body{
   .list > li {
     border: 1px solid var(--blue-700);
     border-radius: 10px;  
-    padding: 2rem;
+    padding: 1rem;
     width: 80%;
     height: 200px;     
     font-size: 25px;
     cursor: pointer;  
     display: flex;
-    flex-direction: column;     
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    gap: 1rem;   
     
   }
 
-  
-   .card__container:hover {  
-    box-shadow:  6px 6px 6px #1f221525;  
-      
+h2{
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+ button{    
+    width: 20%;
+    border: none;
+    border-radius: var(--radius-button);
+    background-color: var(--blue-500);
+    color: var(--grey-100);
+    cursor: pointer;
+    align-self: flex-end;
   }
+
+  
+ 
    
