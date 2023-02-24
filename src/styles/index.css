@@ -43,8 +43,18 @@ body{
 }
 
 
+.search__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
 .list {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;  
     padding: 2rem;  
@@ -54,27 +64,21 @@ body{
   }
   
   .list > li {
-    border: 1px solid var(--grey-400);
+    border: 1px solid var(--blue-700);
     border-radius: 10px;  
     padding: 2rem;
-    width: 400px;
-    height: 500px;     
+    width: 80%;
+    height: 200px;     
     font-size: 25px;
-    cursor: pointer;    
+    cursor: pointer;  
+    display: flex;
+    flex-direction: column;     
     
   }
 
   
-   .list > li:hover {  
+   .card__container:hover {  
     box-shadow:  6px 6px 6px #1f221525;  
       
   }
    
-  .list > li > figure {
-    width: 100%;
-    height: 100%; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }

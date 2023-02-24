@@ -1,0 +1,42 @@
+
+body{
+    
+    background-image: url("../assets/errorImage.jpg.jpg");
+    background-repeat: no-repeat ;
+    background-size: cover;
+    height: 100vh;
+}
+
+.error__container{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: space-between;
+
+}
+h2{
+    color: var(--red-500);
+    font-weight: 700;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+a{
+    width: 7rem;
+    height: 2rem;
+    border: 2px solid;
+    color: var(--grey-200);
+    border-radius: var( --radius-default);
+    text-align: center;   
+    font-weight: 400;
+    background-color: var(--blue-500);
+    padding: 5px;
+}
+
+a:hover{
+    background-color: var(--green-500);
+}

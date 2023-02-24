@@ -1,4 +1,8 @@
-import { getAllBooks } from "./request.js";
+import {render} from "./render.js"
+import { getAllListByCategory} from "./request.js";
 
 
-await getAllBooks()
+const results = await getAllListByCategory()
+
+
+render(true, results)
