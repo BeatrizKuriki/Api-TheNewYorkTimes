@@ -1,4 +1,5 @@
 import { getAllListByCategory } from "./request.js";
+import {getCurrentListByCategory} from "./request.js"
 
 export const render = async(first, array = []) =>{
     const list = document.querySelector('.list')
@@ -61,3 +62,47 @@ export const renderSelect = (array) =>{
     })
 }
 
+
+
+
+
+export const renderBooks = async(first, array = []) =>{
+    const listBooks = document.querySelector('.bookList')
+    listBooks.innerHTML = ''
+
+    if(first){
+        const results = await getCurrentListByCategory()
+       
+
+        results.results.books.forEach(element =>{
+            const card = createCard(element)
+            list.appendChild(card)
+        })
+    }else{
+        array.forEach(element =>{
+            const card = createCardBook(element)
+            list.appendChild(card)
+        })
+    }
+    
+}
+
+const createCardBook = (book) =>{
+    const cardContainer = document.createElement('li');
+    const cardImage = document.createElement('img')
+    const cardTitle = document.createElement('h2');
+    const cardDescription = document.createElement('p');
+    const cardButton = document.createElement('button');    
+
+    
+    cardButton.innerText = 'More'
+    cardImage.src = book.
+
+  
+    cardDescription.innerText =`Updated: ${category.updated} `
+
+    cardContainer.append(cardTitle, cardDescription, cardButton)
+    
+
+    return cardContainer
+}
