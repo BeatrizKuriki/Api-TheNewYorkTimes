@@ -6,7 +6,6 @@ export const render = async(first, array = []) =>{
 
     if(first){
         const results = await getAllListByCategory()
-
        
 
         results.results.forEach(element =>{
@@ -28,24 +27,27 @@ const createCard = (category) =>{
     const cardContainer = document.createElement('li');
     const cardTitle = document.createElement('h2');
     const cardDescription = document.createElement('p');
-    const cardButton = document.createElement('button');
+    const cardButton = document.createElement('button');    
 
     
-    cardButton.innerText = 'Know More'
+    cardButton.innerText = 'More'
 
     cardTitle.innerText =`List Name: ${category.display_name}` 
-    cardDescription.innerText =`Updated: ${category.updated} Newest published date: ${category.newest_published_date}` 
+    cardDescription.innerText =`Updated: ${category.updated} `
 
     cardContainer.append(cardTitle, cardDescription, cardButton)
+    
 
     return cardContainer
 }
 
 const createOption = (option)=>{
-    const newOption = document.querySelector('option')
+    const newOption = document.createElement('option')
 
     newOption.value = option
     newOption.innerText = option
+
+    return newOption
 
 }
 
